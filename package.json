@@ -1,0 +1,37 @@
+{
+  "name": "number2texto",
+  "version": "0.0.3",
+  "description": "Converts numbers to text in English, Spanish and Portuguese",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./test/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/porjolovsky/number2texto.git"
+  },
+  "keywords": [
+    "Español",
+    "Spanish",
+    "number",
+    "text",
+    "número",
+    "números",
+    "numero",
+    "a",
+    "texto",
+    "numeros",
+    "a",
+    "texto",
+    "numbers",
+    "converter",
+    "conversión",
+    "convertir"
+  ],
+  "author": "Lucas Reta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/porjolovsky/number2texto/issues"
+  },
+  "homepage": "https://github.com/porjolovsky/number2texto#readme"
+}

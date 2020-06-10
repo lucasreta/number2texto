@@ -1,0 +1,56 @@
+{
+  "singleLimit": 15,
+  "single": [
+    "Cero",
+    "Uno",
+    "Dos",
+    "Tres",
+    "Cuatro",
+    "Cinco",
+    "Seis",
+    "Siete",
+    "Ocho",
+    "Nueve",
+    "Diez",
+    "Once",
+    "Doce",
+    "Trece",
+    "Catorce",
+    "Quince"
+  ],
+  "double": [
+    {"name": "Diez", "connector": "Dieci", "connectorReplaces": true},
+    {"name": "Veinte", "connector": "Veinti", "connectorReplaces": true},
+    {"name": "Treinta", "connector": " y ", "connectorReplaces": true},
+    {"name": "Cuarenta", "connector": " y ", "connectorReplaces": true},
+    {"name": "Cincuenta", "connector": " y ", "connectorReplaces": true},
+    {"name": "Sesenta", "connector": " y ", "connectorReplaces": true},
+    {"name": "Setenta", "connector": " y ", "connectorReplaces": true},
+    {"name": "Ochenta", "connector": " y ", "connectorReplaces": true},
+    {"name": "Noventa", "connector": " y ", "connectorReplaces": true}
+  ],
+  "triple": [
+    "Cien",
+    "Ciento",
+    "Doscientos",
+    "Trescientos",
+    "Cuatrocientos",
+    "Quinientos",
+    "Seiscientos",
+    "Setecientos",
+    "Ochocientos",
+    "Novecientos"
+  ],
+  "thousand": {
+    "singular": "Mil",
+    "plural": "Mil"
+  },
+  "million": {
+    "singular": "Millón",
+    "plural": "Millones"
+  },
+  "billion": {
+    "singular": "Billón",
+    "plural": "Billones"
+  }
+}
