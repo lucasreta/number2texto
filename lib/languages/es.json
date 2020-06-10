@@ -1,7 +1,7 @@
 {
   "singleLimit": 15,
   "single": [
-    "Cero",
+    "",
     "Uno",
     "Dos",
     "Tres",
@@ -31,8 +31,8 @@
     {"name": "Noventa", "connector": "y", "connectorReplaces": false}
   ],
   "triple": [
-    "Cien",
-    "Ciento",
+    "",
+    {"name": "Ciento", "connector": "", "connectorReplaces": false},
     "Doscientos",
     "Trescientos",
     "Cuatrocientos",
@@ -47,11 +47,11 @@
     "plural": "Mil"
   },
   "million": {
-    "singular": "Millón",
+    "singular": "Un Millón",
     "plural": "Millones"
   },
   "billion": {
-    "singular": "Billón",
+    "singular": "Un Billón",
     "plural": "Billones"
   },
   "position": [

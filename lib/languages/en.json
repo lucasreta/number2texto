@@ -1,0 +1,60 @@
+{
+  "singleLimit": 19,
+  "single": [
+    "",
+    "One",
+    "Two",
+    "Three",
+    "Four",
+    "Five",
+    "Six",
+    "Seven",
+    "Eight",
+    "Nine",
+    "Ten",
+    "Eleven",
+    "Twelve",
+    "Thirteen",
+    "Fourteen",
+    "Fifteen",
+    "Sixteen",
+    "Seventeen",
+    "Eighteen",
+    "Nineteen"
+  ],
+  "double": [
+    {"name": "", "connector": "", "connectorReplaces": false},
+    {"name": "", "connector": "", "connectorReplaces": false},
+    {"name": "Twenty", "connector": "-", "connectorReplaces": false},
+    {"name": "Thirty", "connector": "-", "connectorReplaces": false},
+    {"name": "Forty", "connector": "-", "connectorReplaces": false},
+    {"name": "Fifty", "connector": "-", "connectorReplaces": false},
+    {"name": "Sixty", "connector": "-", "connectorReplaces": false},
+    {"name": "Seventy", "connector": "-", "connectorReplaces": false},
+    {"name": "Eighty", "connector": "-", "connectorReplaces": false},
+    {"name": "Ninety", "connector": "-", "connectorReplaces": false}
+  ],
+  "triple": {
+    "singular": "Hundred",
+    "plural": "Hundred"
+  },
+  "thousand": {
+    "singular": "Thousand",
+    "plural": "Thousand"
+  },
+  "million": {
+    "singular": "A Million",
+    "plural": "Millions"
+  },
+  "billion": {
+    "singular": "A Billion",
+    "plural": "Billions"
+  },
+  "trillion": {
+    "singular": "A Trillion",
+    "plural": "Trillions"
+  },
+  "position": [
+    "single","double","triple","thousand","double","triple","million","double","triple","billion","double","triple","trillion"
+  ]
+}
