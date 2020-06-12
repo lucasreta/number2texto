@@ -56,5 +56,7 @@
   },
   "position": [
     "single","double","triple","thousand","double","triple","million","double","triple","thousand","double","triple","billion"
-  ]
+  ],
+  "decimalSeparator": ",",
+  "decimalConnector": "con"
 }
