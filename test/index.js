@@ -6,6 +6,8 @@ console.log(n2t(20, 'es'));
 console.log(n2t(21, 'es'));
 console.log(n2t(100, 'es'));
 console.log(n2t(101, 'es'));
+console.log(n2t('3307,54', 'es'));
+console.log(n2t(3307.54, 'es'));
 console.log(n2t(10, 'en'));
 console.log(n2t(18, 'en'));
 console.log(n2t(20, 'en'));
