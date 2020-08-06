@@ -1,6 +1,6 @@
 {
   "name": "number2texto",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Converts numbers to text in English, Spanish and Portuguese",
   "main": "index.js",
   "scripts": {
