@@ -20,7 +20,7 @@
   ],
   "double": [
     {"name": "", "connector": "", "connectorReplaces": false},
-    {"name": "Diez", "connector": "Dieci", "connectorReplaces": true},
+    {"name": "Diez", "connector": "Dieci", "connectorReplaces": true, "filledByZero": "Diez", "filledByZeroDigits": 1},
     {"name": "Veinte", "connector": "Veinti", "connectorReplaces": true},
     {"name": "Treinta", "connector": "y", "connectorReplaces": false},
     {"name": "Cuarenta", "connector": "y", "connectorReplaces": false},
@@ -32,7 +32,7 @@
   ],
   "triple": [
     "",
-    {"name": "Ciento", "connector": "", "connectorReplaces": false},
+    {"name": "Ciento", "connector": "", "connectorReplaces": false, "filledByZero": "Cien", "filledByZeroDigits": 2},
     "Doscientos",
     "Trescientos",
     "Cuatrocientos",
@@ -43,16 +43,16 @@
     "Novecientos"
   ],
   "thousand": {
-    "singular": "Mil",
-    "plural": "Mil"
+    "singular": "mil",
+    "plural": "mil"
   },
   "million": {
-    "singular": "Un Millón",
-    "plural": "Millones"
+    "singular": "Un millón",
+    "plural": "millones"
   },
   "billion": {
-    "singular": "Un Billón",
-    "plural": "Billones"
+    "singular": "Un billón",
+    "plural": "billones"
   },
   "position": [
     "single","double","triple","thousand","double","triple","million","double","triple","thousand","double","triple","billion"

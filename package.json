@@ -1,10 +1,11 @@
 {
   "name": "number2texto",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Converts numbers to text in English, Spanish and Portuguese",
   "main": "index.js",
   "scripts": {
-    "test": "node --inspect ./test/index.js"
+    "test": "mocha",
+    "debug": "node --inspect test/index.js"
   },
   "repository": {
     "type": "git",
@@ -36,6 +37,8 @@
   "homepage": "https://github.com/porjolovsky/number2texto#readme",
   "devDependencies": {
     "eslint": "^7.2.0",
-    "eslint-config-google": "^0.14.0"
-  }
+    "eslint-config-google": "^0.14.0",
+    "mocha": "^8.1.1"
+  },
+  "dependencies": {}
 }
