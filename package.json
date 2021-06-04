@@ -1,6 +1,6 @@
 {
   "name": "number2texto",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Converts numbers to text in English, Spanish and Portuguese",
   "main": "index.js",
   "scripts": {
@@ -33,6 +33,9 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/porjolovsky/number2texto/issues"
+  },
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com"
   },
   "homepage": "https://github.com/porjolovsky/number2texto#readme",
   "devDependencies": {
