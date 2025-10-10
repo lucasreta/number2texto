@@ -3,6 +3,22 @@
   "version": "1.0.5",
   "description": "Converts numbers to text in English, Spanish and Portuguese",
   "main": "index.js",
+  "types": "index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./index.mjs",
+      "require": "./index.js",
+      "types": "./index.d.ts"
+    }
+  },
+  "files": [
+    "index.js",
+    "index.mjs",
+    "index.d.ts",
+    "lib/",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "test": "mocha",
     "debug": "node --inspect test/index.js"
