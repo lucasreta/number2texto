@@ -1,0 +1,70 @@
+{
+  "singleLimit": 19,
+  "single": [
+    "",
+    "Um",
+    "Dois",
+    "Três",
+    "Quatro",
+    "Cinco",
+    "Seis",
+    "Sete",
+    "Oito",
+    "Nove",
+    "Dez",
+    "Onze",
+    "Doze",
+    "Treze",
+    "Catorze",
+    "Quinze",
+    "Dezesseis",
+    "Dezessete",
+    "Dezoito",
+    "Dezenove"
+  ],
+  "double": [
+    {"name": "", "connector": "", "connectorReplaces": false},
+    {"name": "", "connector": "", "connectorReplaces": false},
+    {"name": "Vinte", "connector": "e", "connectorReplaces": false},
+    {"name": "Trinta", "connector": "e", "connectorReplaces": false},
+    {"name": "Quarenta", "connector": "e", "connectorReplaces": false},
+    {"name": "Cinquenta", "connector": "e", "connectorReplaces": false},
+    {"name": "Sessenta", "connector": "e", "connectorReplaces": false},
+    {"name": "Setenta", "connector": "e", "connectorReplaces": false},
+    {"name": "Oitenta", "connector": "e", "connectorReplaces": false},
+    {"name": "Noventa", "connector": "e", "connectorReplaces": false}
+  ],
+  "triple": [
+    "",
+    {"name": "Cento", "connector": "e", "connectorReplaces": false, "filledByZero": "Cem", "filledByZeroDigits": 2},
+    "Duzentos",
+    "Trezentos",
+    "Quatrocentos",
+    "Quinhentos",
+    "Seiscentos",
+    "Setecentos",
+    "Oitcentos",
+    "Novecentos"
+  ],
+  "thousand": {
+    "singular": "mil",
+    "plural": "mil"
+  },
+  "million": {
+    "singular": "Um milhão",
+    "plural": "milhões"
+  },
+  "billion": {
+    "singular": "Um bilhão",
+    "plural": "bilhões"
+  },
+  "trillion": {
+    "singular": "Um trilhão",
+    "plural": "trilhões"
+  },
+  "position": [
+    "single","double","triple","thousand","double","triple","million","double","triple","billion","double","triple","trillion"
+  ],
+  "decimalSeparator": ",",
+  "decimalConnector": "com"
+}

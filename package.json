@@ -1,6 +1,6 @@
 {
   "name": "number2texto",
-  "version": "0.0.9",
+  "version": "1.0.0",
   "description": "Converts numbers to text in English, Spanish and Portuguese",
   "main": "index.js",
   "scripts": {
@@ -35,13 +35,12 @@
     "url": "https://github.com/porjolovsky/number2texto/issues"
   },
   "publishConfig": {
-    "registry":"https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com"
   },
   "homepage": "https://github.com/porjolovsky/number2texto#readme",
   "devDependencies": {
     "eslint": "^7.2.0",
     "eslint-config-google": "^0.14.0",
-    "mocha": "^8.1.1"
-  },
-  "dependencies": {}
+    "mocha": "^11.7.4"
+  }
 }
