@@ -72,8 +72,8 @@ describe('n2t() - English', () => {
   it(`should output 'Twenty-four million four hundred eighty-eight thousand two hundred three and ninety-nine' for params ('24488203.99')`, () => {
     assert.equal(n2t('24488203.99'), 'Twenty-four million four hundred eighty-eight thousand two hundred three and ninety-nine');
   });
-  it(`should output 'Forty-five million hundred thirty thousand seven hundred thirty and ten' for params ('45030730.1')`, () => {
-    assert.equal(n2t('45030730.1'), 'Forty-five million hundred thirty thousand seven hundred thirty and ten');
+  it(`should output 'Forty-five million thirty thousand seven hundred thirty and ten' for params ('45030730.1')`, () => {
+    assert.equal(n2t('45030730.1'), 'Forty-five million thirty thousand seven hundred thirty and ten');
   });
 });
 
@@ -165,8 +165,8 @@ describe('n2t() - Portuguese', () => {
   it(`should output 'Cem' for params (100, 'pt')`, () => {
     assert.equal(n2t(100, 'pt'), 'Cem');
   });
-  it(`should output 'Cento Um' for params (101, 'pt')`, () => {
-    assert.equal(n2t(101, 'pt'), 'Cento Um');
+  it(`should output 'Cento e Um' for params (101, 'pt')`, () => {
+    assert.equal(n2t(101, 'pt'), 'Cento e Um');
   });
   it(`should output 'Três mil Trezentos Sete com Cinquenta e Quatro' for params (3307.54, 'pt')`, () => {
     assert.equal(n2t(3307.54, 'pt'), 'Três mil Trezentos Sete com Cinquenta e Quatro');
@@ -216,8 +216,8 @@ describe('n2t() - Portuguese', () => {
   it(`should output 'Dez milhões Trezentos Três mil Duzentos Noventa e Três com Sessenta' for params ('10303293.6', 'pt')`, () => {
     assert.equal(n2t('10303293.6', 'pt'), 'Dez milhões Trezentos Três mil Duzentos Noventa e Três com Sessenta');
   });
-  it(`should output 'Treze milhões Trezentos Três mil Cento Dois com Noventa e Um' for params ('13303102.91', 'pt')`, () => {
-    assert.equal(n2t('13303102.91', 'pt'), 'Treze milhões Trezentos Três mil Cento Dois com Noventa e Um');
+  it(`should output 'Treze milhões Trezentos Três mil Cento e Dois com Noventa e Um' for params ('13303102.91', 'pt')`, () => {
+    assert.equal(n2t('13303102.91', 'pt'), 'Treze milhões Trezentos Três mil Cento e Dois com Noventa e Um');
   });
   it(`should output 'Vinte e Quatro milhões Quatrocentos Oitenta e Oito mil Duzentos Três com Noventa e Nove' for params ('24488203.99', 'pt')`, () => {
     assert.equal(n2t('24488203.99', 'pt'), 'Vinte e Quatro milhões Quatrocentos Oitenta e Oito mil Duzentos Três com Noventa e Nove');
