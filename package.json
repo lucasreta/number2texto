@@ -32,12 +32,12 @@
   "author": "Lucas Reta",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/porjolovsky/number2texto/issues"
+    "url": "https://github.com/lucasreta/number2texto/issues"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
-  "homepage": "https://github.com/porjolovsky/number2texto#readme",
+  "homepage": "https://github.com/lucasreta/number2texto#readme",
   "devDependencies": {
     "eslint": "^7.2.0",
     "eslint-config-google": "^0.14.0",
