@@ -66,5 +66,6 @@
     "single","double","triple","thousand","double","triple","million","double","triple","billion","double","triple","trillion"
   ],
   "decimalSeparator": ",",
-  "decimalConnector": "com"
+  "decimalConnector": "com",
+  "zeroValue": "zero"
 }

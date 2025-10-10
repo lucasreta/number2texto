@@ -1,4 +1,5 @@
 const assert = require('assert');
+const path = require('path');
 const n2t = require('../index.js');
 
 describe('n2t() - English', () => {
@@ -223,5 +224,138 @@ describe('n2t() - Portuguese', () => {
   });
   it(`should output 'Quarenta e Cinco milhões Trinta mil Setecentos Trinta com Dez' for params ('45030730.1', 'pt')`, () => {
     assert.equal(n2t('45030730.1', 'pt'), 'Quarenta e Cinco milhões Trinta mil Setecentos Trinta com Dez');
+  });
+});
+
+describe('n2t() - English - extra edge cases', () => {
+  it("strips non-digits correctly (regex \\D bug): '1a2b3' -> 'One hundred twenty-three'", () => {
+    assert.strictEqual(n2t('1a2b3'), 'One hundred twenty-three');
+  });
+
+  it("handles thousands separators safely: '1,234.56' -> 'One thousand two hundred thirty-four and fifty-six'", () => {
+    assert.strictEqual(n2t('1,234.56'), 'One thousand two hundred thirty-four and fifty-six');
+  });
+
+  it("pads decimals to 2 digits: 385.1 -> '... and ten' (already in your tests) and 7 -> 'Seven'", () => {
+    assert.strictEqual(n2t(7), 'Seven');
+    assert.strictEqual(n2t(385.1), 'Three hundred eighty-five and ten');
+  });
+
+  it("hyphen has no surrounding spaces: 21 -> 'Twenty-one'", () => {
+    assert.strictEqual(n2t(21), 'Twenty-one');
+    // defensive: ensure no ' - ' present
+    assert.ok(!n2t(21).includes(' - '));
+  });
+
+  it("leading zeros don’t break parse: '00021' -> 'Twenty-one'", () => {
+    assert.strictEqual(n2t('00021'), 'Twenty-one');
+  });
+
+  it("decimal with single digit is padded: '0.7' -> 'Zero and seventy'", () => {
+    assert.strictEqual(n2t('0.7'), 'Zero and seventy');
+  });
+
+  it("teens boundary inside doubles: 119 -> 'One hundred nineteen'", () => {
+    assert.strictEqual(n2t(119), 'One hundred nineteen');
+  });
+
+  // This en.json needs thousand.singular = "one thousand" for this to pass.
+  it("1,005 -> 'One thousand five' (expects proper thousand singular wording)", () => {
+    assert.strictEqual(n2t(1005), 'One thousand five');
+  });
+});
+
+describe('n2t() - Errors & invalids', () => {
+  it("unsupported language throws", () => {
+    assert.throws(() => n2t(10, 'zz'), /Unsupported language/i);
+  });
+
+  it("negative numbers are currently unsupported (decide your behavior: throw)", () => {
+    // If you choose to implement negatives later, change this expectation accordingly.
+    assert.throws(() => n2t(-12), /negative|unsupported/i);
+  });
+});
+
+describe('n2t() - Custom dictionary folder resolution', () => {
+  it("loads dictionary from a custom folder path", () => {
+    // This assumes your languages live under ../lib/languages/
+    // Adjust if your structure is different.
+    const customFolder = path.resolve(__dirname, '../lib/languages/') + path.sep;
+    const out = n2t(42, 'en', customFolder);
+    assert.strictEqual(out, 'Forty-two');
+  });
+});
+
+describe('n2t() - Spanish with comma decimal/period thousands', () => {
+});
+
+// Optional: locale-specific decimal separator behavior (depends on your es.json)
+describe('n2t() - Spanish with comma decimal/period thousands', () => {
+  it("'1.234,5' -> 'Mil Doscientos Treinta y Cuatro con Cincuenta'", () => {
+    // This will pass only if es.json uses decimalSeparator="," and your code respects it.
+    // If not implemented yet, keep this test to enforce the fix.
+    assert.strictEqual(n2t('1.234,5', 'es'), 'Mil Doscientos Treinta y Cuatro con Cincuenta');
+  });
+});
+
+describe('n2t() - Portuguese with comma decimal/period thousands', () => {
+  it("'1.234,5' -> 'Mil Duzentos Trinta e Quatro com Cinquenta'", () => {
+    // Portuguese also uses decimalSeparator="," so should handle this format too
+    assert.strictEqual(n2t('1.234,5', 'pt'), 'Mil Duzentos Trinta e Quatro com Cinquenta');
+  });
+});
+
+
+describe('n2t() - Spanish - extra edge cases', () => {
+  it("strips non-digits correctly (regex \\D bug): '1a2b3' -> 'Ciento Veintitres'", () => {
+    assert.strictEqual(n2t('1a2b3', 'es'), 'Ciento Veintitres');
+  });
+
+  it("handles thousands separators safely: '1.234,56' -> 'Mil Doscientos Treinta y Cuatro con Cincuenta y Seis'", () => {
+    assert.strictEqual(n2t('1.234,56', 'es'), 'Mil Doscientos Treinta y Cuatro con Cincuenta y Seis');
+  });
+
+  it("pads decimals to 2 digits: 385,1 -> 'Trescientos Ochenta y Cinco con Diez' and 7 -> 'Seven'", () => {
+    assert.strictEqual(n2t(7, 'es'), 'Siete');
+    assert.strictEqual(n2t(385.1, 'es'), 'Trescientos Ochenta y Cinco con Diez');
+  });
+
+  it("leading zeros don’t break parse: '00021' -> 'Veintiuno'", () => {
+    assert.strictEqual(n2t('00021', 'es'), 'Veintiuno');
+  });
+
+  it("decimal with single digit is padded: '0.7' -> 'Cero con Setenta'", () => {
+    assert.strictEqual(n2t('0.7', 'es'), 'Cero con Setenta');
+  });
+
+  it("teens boundary inside doubles: 119 -> 'Ciento Diecinueve'", () => {
+    assert.strictEqual(n2t(119, 'es'), 'Ciento Diecinueve');
+  });
+});
+
+describe('n2t() - Portuguese - extra edge cases', () => {
+  it("strips non-digits correctly (regex \\D bug): '1a2b3' -> 'Cento e Vinte e Três'", () => {
+    assert.strictEqual(n2t('1a2b3', 'pt'), 'Cento e Vinte e Três');
+  });
+
+  it("handles thousands separators safely: '1.234,56' -> 'Mil Duzentos Trinta e Quatro com Cinquenta e Seis'", () => {
+    assert.strictEqual(n2t('1.234,56', 'pt'), 'Mil Duzentos Trinta e Quatro com Cinquenta e Seis');
+  });
+
+  it("pads decimals to 2 digits: 385,1 -> 'Trezentos Oitenta e Cinco com Dez' and 7 -> 'Sete'", () => {
+    assert.strictEqual(n2t(7, 'pt'), 'Sete');
+    assert.strictEqual(n2t(385.1, 'pt'), 'Trezentos Oitenta e Cinco com Dez');
+  });
+
+  it("leading zeros don't break parse: '00021' -> 'Vinte e Um'", () => {
+    assert.strictEqual(n2t('00021', 'pt'), 'Vinte e Um');
+  });
+
+  it("decimal with single digit is padded: '0.7' -> 'Zero com Setenta'", () => {
+    assert.strictEqual(n2t('0.7', 'pt'), 'Zero com Setenta');
+  });
+
+  it("teens boundary inside doubles: 119 -> 'Cento e Dezenove'", () => {
+    assert.strictEqual(n2t(119, 'pt'), 'Cento e Dezenove');
   });
 });
